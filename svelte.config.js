@@ -10,8 +10,7 @@ const config = {
             pages: 'build',
             assets: 'build',
             fallback: 'index.html',
-            strict: false,
-            precompress: false
+            strict: false
         }),
         paths: {
             base: process.env.NODE_ENV === 'production' ? '/WeatherProjv3' : ''
