@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import { getWeatherInfo } from '$lib/api/weatherApi';
   
   export let location;
@@ -71,7 +72,7 @@
   <!-- Link zur detaillierten Ansicht -->
   <div class="p-4 bg-gray-50">
     <a 
-      href="/?city={encodeURIComponent(location.name)}" 
+      href="{base}/?city={encodeURIComponent(location.name)}" 
       class="block w-full text-center py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
     >
       Details anzeigen

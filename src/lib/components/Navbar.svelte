@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   
   function isActive(path) {
     return $page.url.pathname === path;
@@ -10,7 +11,7 @@
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
-        <a href="/" class="flex items-center text-white hover:text-blue-100 transition-colors">
+        <a href="{base}/" class="flex items-center text-white hover:text-blue-100 transition-colors">
           <span class="text-2xl mr-2">🌤️</span>
           <span class="text-xl font-semibold tracking-wide">Wetterinator</span>
         </a>
@@ -18,13 +19,13 @@
       
       <div class="flex space-x-4">
         <a 
-          href="/" 
+          href="{base}/" 
           class="px-4 py-2 rounded-md text-white transition-all duration-200 {isActive('/') ? 'bg-white bg-opacity-20' : 'hover:bg-white hover:bg-opacity-10'}"
         >
           Home
         </a>
         <a 
-          href="/favorites" 
+          href="{base}/favorites" 
           class="px-4 py-2 rounded-md text-white transition-all duration-200 {isActive('/favorites') ? 'bg-white bg-opacity-20' : 'hover:bg-white hover:bg-opacity-10'}"
         >
           Favoriten
